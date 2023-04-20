@@ -17,15 +17,62 @@ body {
 
 /**
   |============================
-  | COMPONENTS
+  | RESET
   |============================
 */
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 .list {
   list-style: none;
 }
 
 .link {
   text-decoration: none;
+}
+
+/**
+  |============================
+  | / RESET
+  |============================
+*/
+
+/**
+  |============================
+  | COMPONENTS
+  |============================
+*/
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .title {
@@ -35,6 +82,9 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--primary-text-color);
+  margin-bottom: 72px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .subtitle {
@@ -43,6 +93,7 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  margin-bottom: 8px;
 }
 
 .subtitle-description {
@@ -63,6 +114,23 @@ body {
   |============================
 */
 
+.page-header-container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.page-nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -73,6 +141,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  margin-right: 76px;
 }
 
 .logo-text {
@@ -85,6 +154,11 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-text-color);
+}
+
+.menu-item {
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .menu-link {
@@ -106,6 +180,11 @@ body {
   font-style: normal;
 }
 
+.contact-info-list {
+  display: flex;
+  gap: 40px;
+}
+
 .contact-item {
   font-family: inherit;
   font-weight: 400;
@@ -114,6 +193,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
 }
+
 .contact-item:hover,
 .contact-item:focus,
 .contact-item:active {
@@ -133,6 +213,8 @@ body {
 */
 .hero {
   background-color: var(--secondary-bg-color);
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .hero-title {
@@ -141,9 +223,19 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--light-text-color);
+  max-width: 496px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 48px;
 }
 
 .modal-btn {
+  padding-top: 16px;
+  padding-right: 32px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  margin-left: auto;
+  margin-right: auto;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -153,7 +245,8 @@ body {
   letter-spacing: 0.04em;
   color: var(--light-text-color);
   background: #4d5ae5;
-  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .modal-btn:hover,
@@ -171,6 +264,30 @@ body {
   | Advantages
   |============================
 */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.advantages-list {
+  display: flex;
+  gap: 24px;
+  align-content: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.advantages-list-item {
+  width: calc((100%-72px) / 4);
+}
 
 /**
   |============================
@@ -183,6 +300,15 @@ body {
   | Services
   |============================
 */
+.services {
+  padding-top: 0;
+}
+
+.services-list {
+  display: flex;
+  gap: 24px;
+  width: calc((100%-48px) / 3);
+}
 
 /**
   |============================
@@ -195,15 +321,33 @@ body {
   | TEAM
   |============================
 */
+.team-list-content-wrapper {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
 .team {
   background-color: var(--cloud-bg-color);
 }
 
 .team-list-item {
   background-color: var(--primary-bg-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+  flex-basis: calc((100% - 72px) / 4);
 }
 
 .team-name {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -219,6 +363,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
 }
+
 /**
   |============================
   | /TEAM
@@ -230,8 +375,24 @@ body {
   | FOOTER
   |============================
 */
+
 .footer {
   background-color: var(--secondary-bg-color);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.footer-logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4d5ae5;
+  margin-bottom: 16px;
 }
 
 .footer-logo-text {
@@ -251,6 +412,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--cloud-text-color);
+  width: 264px;
 }
 
 /**
@@ -279,6 +441,12 @@ body {
   letter-spacing: 0.04em;
   color: #4d5ae5;
   background: var(--cloud-bg-color);
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .filter-btn:hover,
@@ -290,8 +458,41 @@ body {
   color: var(--light-text-color);
   cursor: pointer;
 }
+
+.portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+.filter-btn-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 72px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+}
+
+.portfolio-list-item {
+  background: var(--primary-bg-color);
+  width: calc((100% - 48px) / 3);
+}
+
+.portfolio-list-content-wapper {
+  border: 1px solid #e7e9fc;
+  border-top: none;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+}
+
 /**
   |============================
   | /PORTFOLIO CSS
   |============================
-*/
+*/ ;
