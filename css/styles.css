@@ -9,17 +9,17 @@
   --cloud-bg-color: #f4f4fd;
 }
 
+/**
+  |============================
+  | RESET
+  |============================
+*/
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--secondary-text-color);
   background-color: var(--primary-bg-color);
 }
 
-/**
-  |============================
-  | RESET
-  |============================
-*/
 h1,
 h2,
 h3,
@@ -180,12 +180,12 @@ button {
 
 .contact-info {
   font-style: normal;
+  margin-left: auto;
 }
 
 .contact-info-list {
   display: flex;
   gap: 40px;
-  justify-content: flex-end;
 }
 
 .contact-item {
@@ -234,6 +234,9 @@ button {
 }
 
 .modal-btn {
+  display: block;
+  min-width: 169px;
+  height: 56px;
   padding-top: 16px;
   padding-right: 32px;
   padding-bottom: 16px;
@@ -244,13 +247,12 @@ button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.04em;
   color: var(--light-text-color);
   background: #4d5ae5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
 }
 
 .modal-btn:hover,
@@ -311,6 +313,9 @@ button {
 .services-list {
   display: flex;
   gap: 24px;
+}
+
+.services-list-item {
   width: calc((100%-48px) / 3);
 }
 
@@ -391,8 +396,7 @@ button {
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
-  display: flex;
-  align-items: center;
+  display: inline-block;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
@@ -404,8 +408,6 @@ button {
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--cloud-text-color);
@@ -499,4 +501,4 @@ button {
   |============================
   | /PORTFOLIO CSS
   |============================
-*/ ;
+*/
