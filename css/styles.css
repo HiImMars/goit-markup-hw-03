@@ -164,6 +164,7 @@ button {
 }
 
 .menu-link {
+  padding: 24px 0;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -463,6 +464,7 @@ button {
   border-radius: 4px;
   color: var(--light-text-color);
   cursor: pointer;
+  border: 1px solid transparent;
 }
 
 .portfolio {
@@ -492,9 +494,7 @@ button {
 .portfolio-list-content-wapper {
   border: 1px solid #e7e9fc;
   border-top: none;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  padding-left: 16px;
+  padding: 32px 16px;
 }
 
 /**
