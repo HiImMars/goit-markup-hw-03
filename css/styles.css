@@ -158,12 +158,8 @@ button {
   color: var(--primary-text-color);
 }
 
-.menu-item {
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-
 .menu-link {
+  display: block;
   padding: 24px 0;
   font-family: inherit;
   font-weight: 500;
